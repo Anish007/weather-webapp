@@ -1,6 +1,3 @@
-console.log('This is from client side js')
-
-
 const formData = document.querySelector('form')
 const inputData = document.querySelector('input')
 const merror = document.querySelector('#message-error')
