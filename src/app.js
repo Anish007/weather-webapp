@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const foreCast = require('./utils/foreCast')
 const geoCode = require('./utils/geoCode')
 
+const app = express() // calling express function to generate the express application
+const port = process.env.PORT || 3000
 // express contains a single function i.e an obejct and we need to call
 //the function  to use express in project
 //Define path for express config
@@ -13,8 +15,6 @@ const partialsPath = path.join(__dirname,'../templates/partials')
 //const publicDirectoryPathhelp = path.join(__dirname,'../public/help.html')
 //const publicDirectoryPathAbout = path.join(__dirname,'../public/about.html')
 //console.log(publicDirectoryPathhelp)
-const app = express() // calling express function to generate the express application
-const port = process.env.PORT || 3000
 
 //use() used to customize the express server.Here we set up a path which provides a static page.
 //the static page will be rendered in browser when root domain requested
