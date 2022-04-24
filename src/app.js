@@ -1,8 +1,8 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
-const foreCast = require('./utils/foreCast')
-const geoCode = require('./utils/geoCode')
+const foreCast = require('./utils/forecast')
+const geoCode = require('./utils/geocode')
 
 const app = express() // calling express function to generate the express application
 const port = process.env.PORT || 3000
