@@ -10,7 +10,7 @@ formData.addEventListener('submit',(e)=>{
     mdata.textContent = "Loading ..."
     //fetch API used to request data from server, It is available on all modern browsers.
     //this can be used only in client side javascript file and not available in node.js
-    fetch('http://localhost:3000/weather?address='+address).then((response)=>{
+    fetch('/weather?address='+address).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 merror.textContent = data.error

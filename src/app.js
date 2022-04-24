@@ -14,6 +14,7 @@ const partialsPath = path.join(__dirname,'../templates/partials')
 //const publicDirectoryPathAbout = path.join(__dirname,'../public/about.html')
 //console.log(publicDirectoryPathhelp)
 const app = express() // calling express function to generate the express application
+const port = process.env.PORT || 3000
 
 //use() used to customize the express server.Here we set up a path which provides a static page.
 //the static page will be rendered in browser when root domain requested
@@ -120,6 +121,6 @@ app.get('*',(req,res)=>{
 //listen() used to start the server.It takes two arguments -  port number and a callback function as starting a server is an
 //asynchronous process.
 //the server listen to the specified port number
-app.listen(3000,() => {
-    console.log('server is running')
+app.listen(port,() => {
+    console.log('server is running on : ' + port)
 })
