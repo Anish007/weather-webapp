@@ -87,7 +87,7 @@ app.get('/weather',(req,res)=>{
                 error: error
             })
         }
-        foreCast(coordinate_lal,coordinate_lon,(error,{temperature,feelsLikeTemperature}={}) => {
+        foreCast(coordinate_lal,coordinate_lon,(error,{temperature,feelsLikeTemperature,windspeed,humidity,icon}={}) => {
             if(error){
                 return res.send({
                     error: error})
@@ -95,7 +95,11 @@ app.get('/weather',(req,res)=>{
             res.send({
                 Temperature: temperature,
                 FeelsLikeTemperature: feelsLikeTemperature,
-                Address: address
+                Address: address,
+                Windspeed:windspeed,
+                Humidity:humidity,
+                Wicon:icon
+
             })
         })
    })

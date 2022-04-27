@@ -17,8 +17,11 @@ formData.addEventListener('submit',(e)=>{
                 mdata.textContent = ""
                 return
             }
-            mdata.textContent = 'Temperature: ' + data.Temperature + ' ' + 'Feels Like: ' + data.FeelsLikeTemperature + ' ' + 'Place: ' + data.Address
-            merror.textContent = ""
+            mdata.textContent = 'Temperature: ' + data.Temperature + ' ' + 'Feels Like: ' + data.FeelsLikeTemperature+ '\n'
+            + 'Wind Speed : ' + data.Windspeed + '\n'
+            + 'Humidity : ' + data.Humidity + '\n'
+            + 'Place: ' + data.Address
+            merror.innerHTML = "<img src="+data.Wicon+">"
             //console.log('Temperature: ' + data.Temperature + ' ' + 'Feels Like: ' + data.FeelsLikeTemperature + ' ' + 'Place: ' + data.Address)
         })
     })

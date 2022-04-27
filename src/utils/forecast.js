@@ -20,7 +20,11 @@ const foreCast = (lal,lon,callback) => {
         }else{
             const forecastData = {
                 temperature: response.body.current.temperature,
-                feelsLikeTemperature: response.body.current.feelslike
+                feelsLikeTemperature: response.body.current.feelslike,
+                windspeed: response.body.current.wind_speed,
+                humidity: response.body.current.humidity,
+                icon: response.body.current.weather_icons[0]
+
             }
         
             callback(undefined,forecastData)
